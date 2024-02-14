@@ -26,7 +26,10 @@
       class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center"
     >
       <!-- home screen -->
-      <section class="home text-center text-white flex flex-col justify-center">
+      <section
+        id="home-screen"
+        class="text-center text-white flex flex-col justify-center"
+      >
         <div
           class="flex flex-col items-center min-h-screen justify-center gap-10"
         >
@@ -38,11 +41,13 @@
           <p class="text-lg">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <button class="btn text-black text-lg">Play Now</button>
+          <button onclick="play()" class="btn text-black text-lg">
+            Play Now
+          </button>
         </div>
       </section>
       <!-- playground area -->
-      <section class="play-ground hidden">
+      <section id="play-ground" class="hidden">
         <!-- play ground container -->
         <div class="flex flex-col items-center gap-10 pt-16">
           <!-- screen -->
@@ -131,5 +136,8 @@
         </div>
       </section>
     </main>
+
+    <script src="./js/utility.js"></script>
+    <script src="./js/alpha-clash.js"></script>
   </body>
 </html>
