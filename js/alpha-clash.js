@@ -1,16 +1,26 @@
-// function paly() {
-//   // step: 1. Hide the home screen. to hide the screen add the class hidden to the home section
-//   const homeSection = document.getElementById("home-screen");
-//   homeSection.classList.add("hidden");
-//   //   console.log(homeSection.classList);
-
-//   // Step: 2. Show the playGround
+// function play() {
+//   // hide the home section
+//   const homeScreenSection = document.getElementById("home-screen");
+//   homeScreenSection.classList.add("hidden");
+//   // show the playground
 //   const playGroundSection = document.getElementById("play-ground");
 //   playGroundSection.classList.remove("hidden");
-//   //   console.log(playGroundSection);
 // }
+
+function continueGame() {
+  const alphabet = getRandomAlphabet();
+  //   console.log("your random alphabet", alphabet);
+
+  // set randomly generate alphabet to the screen (show it)
+  const currentAlphabetElement = document.getElementById("current-alphabet");
+  currentAlphabetElement.innerText = alphabet;
+
+  // set background color
+  setBackgroundColorById(alphabet);
+}
 
 function play() {
   hideElementById("home-screen");
   showElementById("play-ground");
+  continueGame();
 }
